@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  BreakingBadCharacters
+
+  Created by TarıkOzturk on 28.09.2022.
+  
+*/
+
+Splash.appTitle = "BREAKING BAD";
+Splash.appSubTitle = "CHARACTERS";
