@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - SearchElement
+// MARK: - BB API model
 
 typealias Search = [SearchElement]
 

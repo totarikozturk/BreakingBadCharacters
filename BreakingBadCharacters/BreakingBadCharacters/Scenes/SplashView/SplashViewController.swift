@@ -13,7 +13,6 @@ class SplashViewController: UIViewController {
 
     let appTitle = UILabel()
     let appSubtitle = UILabel()
-    var elements = [SearchElement]()
     let activityIndicator = NVActivityIndicatorView(
         frame: CGRect(x: 0,
                       y: 0,
@@ -28,21 +27,6 @@ class SplashViewController: UIViewController {
 
         configureView()
         activityIndicator.startAnimating()
-        CharacterService.getCharacters { [weak self] result in
-            switch result {
-            case .success(let element):
-                self?.elements = element
-                print(self?.elements as Any)
-
-            case .failure(let error):
-                print(error)
-            }
-        }
-     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.setupHomeView()
             self.activityIndicator.stopAnimating()

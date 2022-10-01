@@ -8,5 +8,6 @@
 import Foundation
 
 struct API {
-    static let baseURL = "https://www.breakingbadapi.com/api/characters"
+    static let charURL = "https://www.breakingbadapi.com/api/characters"
+    static let searchCharURL = "https://www.breakingbadapi.com/api/characters?name="
 }

@@ -8,3 +8,5 @@
 
 Splash.appTitle = "BREAKING BAD";
 Splash.appSubTitle = "CHARACTERS";
+Home.title = "Characters for BB";
+Home.searchBarPlaceHolderText = "Search Characters...";

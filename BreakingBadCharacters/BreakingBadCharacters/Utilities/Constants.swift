@@ -14,3 +14,11 @@ enum CustomColor {
     static let contentViewColor = UIColor(named: "ContentColor")
     static let rateColor = UIColor(named: "RateColor")
 }
+
+enum CellIdent {
+    static let BBCell = "BBCell"
+}
+
+enum Frame {
+    static let ten: CGFloat = 10
+}

@@ -1,17 +1,17 @@
 //
-//  CharacterService.swift
+//  SearchCharacterService.swift
 //  BreakingBadCharacters
 //
-//  Created by TarıkOzturk on 29.09.2022.
+//  Created by TarıkOzturk on 1.10.2022.
 //
 
 import Alamofire
 import UIKit
 
-class CharacterService {
+class SearchCharacterService {
 
-    static func getCharacters(completionHandler: @escaping (Result<Search, Error>) -> Void) {
-        AF.request(API.charURL, method: .get).response { response in
+    static func getSearchCharacter(name: String, completionHandler: @escaping (Result<Search, Error>) -> Void) {
+        AF.request((API.searchCharURL + name), method: .get).response { response in
             switch response.result {
             case .success:
                 if let jsonData = response.data {
