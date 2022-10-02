@@ -5,8 +5,12 @@
   Created by TarıkOzturk on 28.09.2022.
   
 */
+// MARK: Splash
 
 Splash.appTitle = "BREAKING BAD";
 Splash.appSubTitle = "CHARACTERS";
+
+//MARK: Home
+
 Home.title = "Characters for BB";
 Home.searchBarPlaceHolderText = "Search Characters...";

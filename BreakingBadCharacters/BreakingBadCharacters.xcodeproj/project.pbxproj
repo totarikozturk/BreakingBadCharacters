@@ -142,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				D0237AD728E4542A000F9E54 /* Constants.swift */,
+				D0237AD928E45492000F9E54 /* Extensions */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -174,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				D0237AC828E44138000F9E54 /* App */,
-				D0237AD928E45492000F9E54 /* Extensions */,
 				D0237AD028E441E8000F9E54 /* Model */,
 				D0237AC928E4413E000F9E54 /* Resources */,
 				D0237ACA28E4414A000F9E54 /* Scenes */,
@@ -266,6 +266,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		D04D6C9728E43A1700FBACE2 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -279,7 +280,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint > /dev/null; then\n  swiftlint autocorrect && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint > /dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -459,7 +460,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BreakingBadCharacters;
+				PRODUCT_BUNDLE_IDENTIFIER = com.triomobil.breakingbadcharacters;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -488,7 +489,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.BreakingBadCharacters;
+				PRODUCT_BUNDLE_IDENTIFIER = com.triomobil.breakingbadcharacters;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

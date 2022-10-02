@@ -15,8 +15,8 @@ enum CustomColor {
     static let rateColor = UIColor(named: "RateColor")
 }
 
-enum CellIdent {
-    static let BBCell = "BBCell"
+enum CellIdentifier {
+    static let BreakingBadCell = "BBCell"
 }
 
 enum Frame {

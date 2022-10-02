@@ -6,7 +6,12 @@
   
 */
 
+// MARK: Splash
+
 Splash.appTitle = "BREAKING BAD";
 Splash.appSubTitle = "KARAKTERLERİ";
+
+//MARK: Home
+
 Home.title = "BB için Karacterler";
 Home.searchBarPlaceHolderText = "Aramak istediğin karakter...";

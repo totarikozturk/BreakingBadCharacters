@@ -10,7 +10,7 @@ import UIKit
 
 extension SplashViewController {
 
-// MARK: configureView
+    // MARK: configureView
     func configureView() {
         view.addSubview(appTitle)
         view.addSubview(appSubtitle)
@@ -21,7 +21,7 @@ extension SplashViewController {
         makeActivityIndicator()
     }
 
-// MARK: makeAppTitle
+    // MARK: makeAppTitle
     func makeAppTitle() {
         appTitle.text = "Splash.appTitle".localized
         appTitle.textColor = CustomColor.titleColor
@@ -32,7 +32,7 @@ extension SplashViewController {
         }
     }
 
-// MARK: makeAppSubTitle
+    // MARK: makeAppSubTitle
     func makeAppSubTitle() {
         appSubtitle.text = "Splash.appSubTitle".localized
         appSubtitle.textColor = CustomColor.titleColor
@@ -43,7 +43,7 @@ extension SplashViewController {
         }
     }
 
-// MARK: makeActivityIndicator
+    // MARK: makeActivityIndicator
     func makeActivityIndicator() {
         activityIndicator.snp.makeConstraints { make in
             make.top.equalTo(view.center.y)
@@ -51,7 +51,7 @@ extension SplashViewController {
         }
     }
 
-// MARK: setupHomeView
+    // MARK: setupHomeView
     func setupHomeView() {
         DispatchQueue.main.async {
             let controller = UINavigationController(rootViewController: HomeViewController())

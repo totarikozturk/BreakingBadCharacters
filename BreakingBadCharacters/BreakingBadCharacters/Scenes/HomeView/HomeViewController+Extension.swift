@@ -19,8 +19,9 @@ extension HomeViewController: UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(
-                                        withReuseIdentifier: CellIdent.BBCell,
-                                        for: indexPath) as? HomeViewCell else { return UICollectionViewCell() }
+            withReuseIdentifier: CellIdentifier.BreakingBadCell,
+            for: indexPath) as? HomeViewCell else { return UICollectionViewCell() }
+
         let data = viewModel.cellForRowAt(indexPath: indexPath)
         cell.setCellValue(data)
         return cell
@@ -37,10 +38,10 @@ extension HomeViewController: UISearchBarDelegate, UISearchResultsUpdating {
                         .lowercased()
                         .replacingOccurrences(of: " ", with: "+")
                         .capitalized
+
         DispatchQueue.main.async {
             self.viewModel.getSearchCharData(name: name) {
-                guard let collectionView = self.collectionView else { return }
-                    collectionView.reloadData()
+                self.collectionView.reloadData()
             }
         }
     }

@@ -10,7 +10,7 @@ import UIKit
 
 class SearchCharacterService {
 
-    static func getSearchCharacter(name: String, completionHandler: @escaping (Result<Search, Error>) -> Void) {
+    func getSearchCharacter(name: String, completionHandler: @escaping (Result<Search, Error>) -> Void) {
         AF.request((API.searchCharURL + name), method: .get).response { response in
             switch response.result {
             case .success:

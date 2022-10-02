@@ -10,7 +10,7 @@ import UIKit
 
 extension HomeViewCell {
 
-// MARK: configure
+    // MARK: configure
     func configure() {
         backgroundColor = CustomColor.backGroundColor
         contentView.layer.cornerRadius = 16
@@ -25,8 +25,9 @@ extension HomeViewCell {
         makeNickNameView()
     }
 
-// MARK: makeImageView
+    // MARK: makeImageView
     func makeImageView() {
+        image.contentMode = .scaleAspectFit
         image.layer.cornerRadius = 16
         image.clipsToBounds = true
         image.snp.makeConstraints { make in
@@ -37,7 +38,7 @@ extension HomeViewCell {
         }
     }
 
-// MARK: makeNameView
+    // MARK: makeNameView
     func makeNameView() {
         name.lineBreakMode = .byWordWrapping
         name.numberOfLines = 0
@@ -53,7 +54,7 @@ extension HomeViewCell {
         }
     }
 
-// MARK: makeNickNameView
+    // MARK: makeNickNameView
     func makeNickNameView() {
         nickName.lineBreakMode = .byWordWrapping
         nickName.numberOfLines = 0
