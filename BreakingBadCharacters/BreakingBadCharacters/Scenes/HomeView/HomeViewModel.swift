@@ -18,6 +18,7 @@ class HomeViewModel {
             case .success(let char):
                 self.char = char
                 completion()
+                print("data refresh")
 
             case .failure(let error):
                 print(error)
@@ -45,6 +46,7 @@ class HomeViewModel {
                                          selector: #selector(updateTimer),
                                          userInfo: nil,
                                          repeats: true)
+            completion()
         }
     }
 
